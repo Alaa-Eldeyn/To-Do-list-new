@@ -37,6 +37,11 @@ body{
     padding: 1rem;
     box-shadow: 0 0 30px #2222225a;
 }
+.container h1{
+    margin: 10px 0;
+    color: #fff;
+    text-shadow: 0 0 15px #383838;
+}
 .form{
     width: 100%;
     max-width: 350px;
