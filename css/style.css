@@ -1,0 +1,150 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background-color: #02111c;
+}
+::-webkit-scrollbar-corner{
+    background-color: #005689;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #00426b;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #003758;
+}
+body{
+    background-color: #005689;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: cairo;
+}
+.container{
+    width: 80vw;
+    height: 90vh;
+    margin: auto;
+    background-color: #007cb9;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 0 30px #2222225a;
+}
+.form{
+    width: 100%;
+    max-width: 350px;
+}
+@media (max-width: 500px){
+    .container{
+        width: 100vw;
+        height: 100vh;
+    }
+    .form{
+        display: grid;
+        grid-template-columns: 1fr 65px;
+        gap: .5rem;
+        align-items: center;
+        order: 1;
+        position: absolute;
+        bottom: 1rem;
+        padding: 0 1rem;
+    }
+    .form #deleteAll{
+        position: absolute;
+        bottom: 50px;
+        width: 65px;
+        right: 1rem;
+        font-size: .8rem;
+    }
+}
+@media (min-width: 1000px){
+    .container{
+        width: 800px;
+    }
+}
+.taskInput, .submitArea, .myTasks{
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: .5rem;
+}
+.taskInput #task, .submitArea #submit, .myTasks, #deleteAll button{
+    width: 100%;
+    padding: .5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #005689;
+    color: white;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.44);
+    transition: .2s;
+}
+.taskInput #task{
+    cursor: auto;
+}
+.taskInput #task:focus{
+    outline: 1px solid rgba(255, 255, 255, 0.44);
+}
+.taskInput #task::placeholder{
+    color: rgba(245, 245, 245, 0.395);
+}
+.submitArea #submit:hover, #deleteAll button:hover{
+    letter-spacing: .5;
+    background-color: #007cc3;
+}
+.myTasks{
+    overflow: auto;
+    max-height: 500px;
+}
+.theTask:hover:not(.done){
+    background-color: #004875;
+}
+.done{
+    background-color: #003758;
+    opacity: .8;
+    color: #888888;
+}
+.myTasks .theTask{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 5px;
+    transition: .2s;
+    cursor: pointer;
+}
+.myTasks .theTask:not(:last-of-type){
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.23);
+}
+.myTasks #delete, .myTasks #edit{
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.44);
+    color: white;
+    background-color: transparent;
+    transition: .2s;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.myTasks #delete:hover, .myTasks #edit:hover{
+    background-color: #007cb9;
+}
+p span {
+    color: #d2d2d23a;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+#deleteAll button{
+    border: 1px solid rgba(255, 255, 255, 0.44);
+    margin-top: 5px;
+    background-color: #72002ccc;
+}
+#deleteAll button:hover{
+    background-color: #8a0035cc;
+}
