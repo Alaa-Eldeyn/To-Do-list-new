@@ -57,7 +57,7 @@ body{
         gap: .5rem;
         align-items: center;
         order: 1;
-        position: absolute;
+        position: fixed;
         bottom: 1rem;
         padding: 0 1rem;
     }
